@@ -70,7 +70,7 @@ map $http_user_agent $denied_scraper {
   'br.com.concisoti.potybus' 1; # App
   'com.soft373.taptaxi'  1;
   'com.kradac.ktxcore'   1;
-  'ru.crowdsystems.topcontrol.knd' 1;
+  '~^ru\.crowdsystems\.topcontrol\.knd' 1;
   'pl.itaxi.driver'      1;
   'net.uztaxi.driver'    1;
   'OSMDroid/2.1 (its; rutaxi 3.28.0)' 1;
@@ -114,6 +114,8 @@ map $http_referer $denied_referer {
   '~^https?://[^.]*\.9db\.jp/'           1; # Too much traffic
   '~^https?://clustrmaps\.com/'          1; # Too much traffic
   '~^https?://[^.]*\.clustrmaps\.com/'   1; # Too much traffic
+  '~^https?://[^.]*\.wialon\.com/'             1; # Too much traffic
+  '~^https?://[^.]*\.gps-trace\.com/'          1; # Too much traffic
 }
 
 map $http_referer $osm_referer {
