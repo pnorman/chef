@@ -64,6 +64,7 @@ map $http_user_agent $denied_scraper {
   'kc_android'           1; # Default or fake
   'Mozilla/4.0'          1; # Fake
   'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)' 1;  # Fake
+  'host'                 1; # App
   '~^runtastic'          1; # App
   '~^Where\ my\ children' 1; # App
   '~^maptestapp498702880' 1; # App
